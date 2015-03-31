@@ -1,3 +1,4 @@
+<?php ?>
 
 <!DOCTYPE html>
 <html>
@@ -35,18 +36,17 @@
 					
 					<div class="navbar-collapse collapse ">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="?show=usuario&action=home">Home</a></li>
 							<li class="dropdown ">
-								<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Features <b class=" icon-angle-down"></b></a>
+								<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Eventos <b class=" icon-angle-down"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="typography.html">Typography</a></li>
-									<li><a href="components.html">Components</a></li>
+									<li><a href="?show=evento&action=listaEventos">Listar Eventos</a></li>
 									<li><a href="pricingbox.html">Pricing box</a></li>
 								</ul>
 							</li>
-							<li><a href="portfolio.html">Portfolio</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li class="active"><a href="contact.html">Contact</a></li>
+							<li><a href="?show=usuario&aaction=listaEventos">Eventos</a></li>
+							<li><a href="?show=usuario&aaction=home">Participantes</a></li>
+							<li><a href="" onClick="logout()">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -54,7 +54,11 @@
 		</header>
 		<!-- end header -->
 		
-		<footer>
+		<section id="content">
+			<?php echo $view->show();	//Show central content ?>
+		</section>
+		
+		<footer class="footer">
 			<div id="sub-footer">
 				<div class="container">
 					<div class="row">
@@ -72,5 +76,12 @@
 	<!-- javascript -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function logout(){
+			$.getJSON("?show=login&action=logout&ajax=1", function (){
+				window.location.href = "?show=static&action=home";				
+			});
+		}
+	</script>
 	</body>
 </html>

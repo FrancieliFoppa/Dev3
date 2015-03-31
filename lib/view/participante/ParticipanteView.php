@@ -4,12 +4,10 @@ require_once ('lib/view/SiteView.php');
 class ParticipanteView extends SiteView{
 
 	public function getTemplate() {
-		error_log($this->action);
 		ob_start();
 		if($this->action == null){
 			require_once("lib/view/deny/default.php");			
 		}else{
-			error_log($this->action);
 			switch($this->action) {
 				case 'listaEventos':
 					require_once("lib/view/evento/listaEventos.php");

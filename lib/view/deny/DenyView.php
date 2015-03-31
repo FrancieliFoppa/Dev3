@@ -13,11 +13,14 @@ class DenyView extends SiteView{
 				case 'pageNotFound':
 					require_once("lib/view/deny/pageNotFound.php");
 					break;
+				case 'accessDenied':
+					require_once("lib/view/deny/accessDenied.php");
+					break;
 				case 'actionNotFound':
 					require_once("lib/view/deny/actionNotFound.php");
 					break;
 				default:
-					require_once("lib/view/deny/default.php");
+					require_once("lib/view/deny/pageNotFound.php");
 			}
 		}				
 		$output = ob_get_contents();

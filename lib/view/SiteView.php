@@ -14,14 +14,6 @@ class SiteView{
 	}	
 	
 	public function getTemplate() {
-		if($this->action == "home"){
-			ob_start();
-			require_once("lib/view/home.php");
-			$output = ob_get_contents();
-			ob_end_clean();
-			return $output;
-		}
-		
 		$output ="P&aacute;gina n&atilde;o dispon&iacute;vel.";
 		return $output;
 	}

@@ -1,20 +1,16 @@
 <?php
 require_once ('lib/view/SiteView.php');
 
-class EventoView extends SiteView{
+class UsuarioView extends SiteView{
 
 	public function getTemplate() {
-		
 		ob_start();
 		if($this->action == null){
 			require_once("lib/view/deny/default.php");			
-		}else{			
+		}else{
 			switch($this->action) {
-				case 'listaEventos':
-					require_once("lib/view/evento/listaEventos.php");
-					break;
 				case 'home':
-					require_once("lib/view/evento/home.php");
+					require_once("lib/view/usuario/home.php");
 					break;
 				default:
 					require_once("lib/view/deny/pageNotFound.php");

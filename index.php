@@ -21,7 +21,7 @@
 		$controller = ControllerFactory::getInstance($_REQUEST["show"]);
 	}else{
 		//Default controller
-		$controller = ControllerFactory::getInstance("site");
+		$controller = ControllerFactory::getInstance("static");
 	}
 	
 	$view = $controller->getView();
@@ -29,12 +29,16 @@
 	if($ajax){
 		echo $view->getContent();
 	}else{
-		if(isset($_SESSION["usuario"])){
-			include 'lib/view/usuario/index.php';
-		}else if(isset($_SESSION["participante"])){
-			include 'lib/view/participante/index.php';
+		if(!isset($_REQUEST["show"])){
+			include 'lib/view/static/index.php';
 		}else{
-			include 'lib/view/index.php';
+			if(isset($_SESSION["usuario"])){
+				include 'lib/view/usuario/index.php';
+			}else if(isset($_SESSION["participante"])){
+				include 'lib/view/participante/index.php';
+			}else{
+				include 'lib/view/static/index.php';
+			}
 		}
 	}		
 ?>

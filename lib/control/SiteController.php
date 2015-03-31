@@ -1,7 +1,6 @@
 <?php
 
 require_once ('lib/view/deny/DenyView.php');
-require_once ('lib/view/SiteView.php');
 
 class SiteController {
 	
@@ -13,7 +12,7 @@ class SiteController {
 	
 	public function getView() {
 		if($this->view == null){
-			$this->view = new SiteView("home");
+			$this->view = DenyView("pageNotFound");
 		}
 		return $this->view;
 	}
