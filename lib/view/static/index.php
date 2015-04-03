@@ -24,7 +24,7 @@
 				<div class="navbar navbar-default navbar-static-top">
 					<div class="container">
 						<div class="navbar-header">
-							<a class="navbar-brand" href="index.html">DS<span>3</span></a>
+							<a class="navbar-brand" href="?show=static&action=home">DS<span>3</span></a>
 						</div>
 					</div>
 				</div>
