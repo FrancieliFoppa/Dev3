@@ -216,9 +216,21 @@ ul.clients li:hover {
 
 /* footer */
 footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 160px;
 	background:#68A4C4;
 }
 #sub-footer{
 	background:#68A4C4;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 160px;
 }
 
