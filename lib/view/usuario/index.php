@@ -13,6 +13,13 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 		<link href="css/style.css" rel="stylesheet" />
 		<link href="css/skin.css" rel="stylesheet" />
+		<link href="js/dataTables/dataTables-bootstrap.css" rel="stylesheet" />
+		<link href="js/dataTables/dataTables.css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/dataTables/dataTables.min.js"></script>
+		<script src="js/dataTables/dataTables-bootstrap.js"></script>
+	
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -31,7 +38,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.html">DS<span>3</span></a>
+						<a class="navbar-brand" href="?show=usuario&action=home">DS<span>3</span></a>
 					</div>
 					
 					<div class="navbar-collapse collapse ">
@@ -41,11 +48,10 @@
 								<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Eventos <b class=" icon-angle-down"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="?show=evento&action=listaEventos">Listar Eventos</a></li>
-									<li><a href="pricingbox.html">Pricing box</a></li>
+									<li><a href="?show=usuario&action=home">op2</a></li>
 								</ul>
 							</li>
-							<li><a href="?show=usuario&aaction=listaEventos">Eventos</a></li>
-							<li><a href="?show=usuario&aaction=home">Participantes</a></li>
+							<li><a href="?show=usuario&action=home">Participantes</a></li>
 							<li><a href="" onClick="logout()">Logout</a></li>
 						</ul>
 					</div>
@@ -74,8 +80,6 @@
 	</div>
 	
 	<!-- javascript -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		function logout(){
 			$.getJSON("?show=login&action=logout&ajax=1", function (){
