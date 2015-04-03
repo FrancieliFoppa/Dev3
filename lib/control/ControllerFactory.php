@@ -7,6 +7,7 @@ require_once ('lib/control/QueryController.php');
 require_once ('lib/control/DenyController.php');
 require_once ('lib/control/StaticController.php');
 require_once ('lib/control/LoginController.php');
+require_once ('lib/control/EventoController.php');
 
 class ControllerFactory {
 
@@ -17,6 +18,7 @@ class ControllerFactory {
 			"login"			=> "LoginController",
 			"query"			=> "QueryController",
 			"deny"			=> "DenyController",
+			"evento"		=> "EventoController",
 			"static"		=> "StaticController"
 	);
 
