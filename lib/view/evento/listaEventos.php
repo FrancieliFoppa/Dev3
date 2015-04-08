@@ -1,10 +1,15 @@
 <?php 
 ?>
 
+<style type="text/css">
+	.odd { cursor: pointer; }
+	.even { cursor: pointer; }
+</style>
+
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h2>Eventos <small> - Lista de Eventos</small></h2>
+			<h3>Eventos <small> - Lista de Eventos</small></h3>
 			<br>
 			<table id="table_listaEventos" class="display" >
 				<thead>
@@ -54,9 +59,19 @@
 </div>
 
 <script>
-
 	$(document).ready(function(){
-		$('#table_listaEventos').DataTable();
+		var table = $('#table_listaEventos').DataTable({
+		    "bPaginate": true,
+		    "bLengthChange": false,
+		    "bFilter": true,
+		    "bInfo": false,
+		    "bAutoWidth": false,
+		    "iDisplayLength": 50 
+		});
+		
+		$('#table_listaEventos tbody').on('click', 'tr', function () {
+			var id = table.row(this).data()[0];
+		    window.location.href = "?show=evento&action=descEvento&cod="+id;
+		});
 	});
-    
 </script>
