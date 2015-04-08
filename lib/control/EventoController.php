@@ -10,6 +10,9 @@ class EventoController extends SiteController {
 		parent::__construct();
 		if(isset($_SESSION["usuario"]) || isset($_SESSION["participante"])){
 			switch($_REQUEST["action"]){
+				case "descEvento" :
+					$this->view = new EventoView("descEvento");
+					break;
 				case "listaEventos" :
 					$this->view = new EventoView("listaEventos");
 					break;

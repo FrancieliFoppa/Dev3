@@ -9,6 +9,9 @@ class EventoView extends SiteView{
 			require_once("lib/view/deny/default.php");			
 		}else{
 			switch($this->action) {
+				case 'descEvento':
+					require_once("lib/view/evento/descEvento.php");
+					break;
 				case 'listaEventos':
 					require_once("lib/view/evento/listaEventos.php");
 					break;
