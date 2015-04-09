@@ -11,7 +11,7 @@
 		<div class="col-lg-12">
 			<h3>Eventos <small> - Lista de Eventos</small></h3>
 			<br>
-			<button type="button" class="btn btn-primary">Add Evento</button>
+			<button type="button" class="btn btn-primary" id="btnAddEvento">Add Evento</button>
 			<table id="table_listaEventos" class="display" >
 				<thead>
 					<tr>
@@ -64,6 +64,10 @@
 
 <script>
 	$(document).ready(function(){
+		$('#btnAddEvento').click(function () {
+			$.fancybox('<h1>Lorem lipsum</h1>');
+		});
+		
 		var table = $('#table_listaEventos').DataTable({
 		    "bPaginate": true,
 		    "bLengthChange": false,

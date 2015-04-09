@@ -15,10 +15,12 @@
 		<link href="css/skin.css" rel="stylesheet" />
 		<link href="js/dataTables/dataTables-bootstrap.css" rel="stylesheet" />
 		<link href="js/dataTables/dataTables.css" rel="stylesheet" />
+		<link href="js/fancyBox/fancybox.css" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/dataTables/dataTables.min.js"></script>
 		<script src="js/dataTables/dataTables-bootstrap.js"></script>
+		<script src="js/dataTables/dataTables.min.js"></script>
+		<script src="js/fancyBox/fancybox.js"></script>
 	
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

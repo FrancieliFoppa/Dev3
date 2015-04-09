@@ -111,7 +111,7 @@
 		$('#myTab a').click(function (e) {
 			e.preventDefault()
 			$(this).tab('show')
-		})
+		});
 		
 		var table = $('#table_listaEventos').DataTable({
 			"bPaginate": true,
