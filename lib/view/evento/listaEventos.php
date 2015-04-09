@@ -11,12 +11,13 @@
 		<div class="col-lg-12">
 			<h3>Eventos <small> - Lista de Eventos</small></h3>
 			<br>
+			<button type="button" class="btn btn-primary">Add Evento</button>
 			<table id="table_listaEventos" class="display" >
 				<thead>
 					<tr>
 						<th>id</th>
 						<th>Nome</th>
-						<th>Descri&ccedil;&atilde;o</th>
+						<th>Participantes</th>
 						<th>Data In&iacute;cio</th>
 						<th>Data Fim</th>
 					</tr>
@@ -25,34 +26,37 @@
 					<tr>
 						<th>id</th>
 						<th>Nome</th>
-						<th>Descri&ccedil;&atilde;o</th>
+						<th>Participantes</th>
 						<th>Data In&iacute;cio</th>
 						<th>Data Fim</th>
 					</tr>
 				</tfoot>
+				
+				<!-- DADOS DE SIMULAÇÃO -->
 				<tbody>
 					<tr>
 						<td>0</td>
 						<td>System Architect</td>
-						<td>Edinburgh</td>
+						<td>12</td>
 						<td>2009/01/12</td>
 						<td>2011/04/25</td>
 					</tr>
 					<tr>
 						<td>1</td>
 						<td>Accountant</td>
-						<td>Tokyo</td>
+						<td>15</td>
 						<td>2011/07/25</td>
 						<td>2011/07/25</td>
 					</tr>
 					<tr>
 						<td>2</td>
 						<td>Junior Technical Author</td>
-						<td>San Francisco</td>
+						<td>0</td>
 						<td>2009/01/12</td>
 						<td>2009/01/12</td>
 					</tr>
 				</tbody>
+				<!-- DADOS DE SIMULAÇÃO -->
 			</table>
 		</div>
 	</div>
@@ -66,7 +70,7 @@
 		    "bFilter": true,
 		    "bInfo": false,
 		    "bAutoWidth": false,
-		    "iDisplayLength": 50 
+		    "iDisplayLength": 5 
 		});
 		
 		$('#table_listaEventos tbody').on('click', 'tr', function () {
