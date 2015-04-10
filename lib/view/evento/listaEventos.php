@@ -64,8 +64,31 @@
 
 <script>
 	$(document).ready(function(){
+		
 		$('#btnAddEvento').click(function () {
-			$.fancybox('<h1>Lorem lipsum</h1>');
+			var content = null;
+			
+			$.ajax({
+				type: "POST",
+				url: '?show=evento&action=listaEventos',
+				contentType: "application/json; charset=utf-8",
+				dataType: "html",
+				data: '{resourceFileName:"mapedit",culture:"' + $("#lang-name").val() + '"}',
+				cache: true,
+				async: false, // to set local variable
+				success: function(data) {
+					content = data;
+				}
+			});
+			
+			$.fancybox.open({
+				live: true,
+				type: 'iframe',
+				content: content,
+				afterClose : function() { 
+					//setupPage();
+				}
+			});
 		});
 		
 		var table = $('#table_listaEventos').DataTable({
@@ -74,7 +97,7 @@
 		    "bFilter": true,
 		    "bInfo": false,
 		    "bAutoWidth": false,
-		    "iDisplayLength": 5 
+		    "iDisplayLength": 15 
 		});
 		
 		$('#table_listaEventos tbody').on('click', 'tr', function () {

@@ -18,8 +18,8 @@
 		<link href="js/fancyBox/fancybox.css" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/dataTables/dataTables-bootstrap.js"></script>
 		<script src="js/dataTables/dataTables.min.js"></script>
+		<script src="js/dataTables/dataTables-bootstrap.js"></script>
 		<script src="js/fancyBox/fancybox.js"></script>
 	
 		
