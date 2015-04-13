@@ -32,12 +32,16 @@
 		if(!isset($_REQUEST["show"])){
 			include 'lib/view/static/index.php';
 		}else{
-			if(isset($_SESSION["usuario"])){
-				include 'lib/view/usuario/index.php';
-			}else if(isset($_SESSION["participante"])){
-				include 'lib/view/participante/index.php';
+			if(isset($_REQUEST["onlyShow"]) && $_REQUEST["onlyShow"] == 1){
+				echo $view->show();
 			}else{
-				include 'lib/view/static/index.php';
+				if(isset($_SESSION["usuario"])){
+					include 'lib/view/usuario/index.php';
+				}else if(isset($_SESSION["participante"])){
+					include 'lib/view/participante/index.php';
+				}else{
+					include 'lib/view/static/index.php';
+				}
 			}
 		}
 	}		
