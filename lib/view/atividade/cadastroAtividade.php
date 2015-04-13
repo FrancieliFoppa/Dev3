@@ -7,7 +7,7 @@
 	<div class="row">
 		<form action="#" class="horizontal-form">
 			<div class="form-body">
-				<h3 class="form-section">Cadastro de Evento</h3>
+				<h3 class="form-section">Edi&ccedil;&atilde;o de Atividade</h3>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
@@ -38,7 +38,11 @@
 				</div>
 			</div>
 			<div class="form-actions right">
-				<button type="button" class="btn btn-lg btn-theme margintop10 pull-left" id="btSalva">Salva</button>
+			
+				<div class="col-lg-2"><button type="button" class="btn btn-lg btn-theme margintop10 pull-left" id="btSalva">Salvar</button></div>
+				
+				<!-- TODO: Validar se é edição ou nova atividade, se é nova, não exibir esse botão-->
+				<div class="col-lg-3"><button type="button" class="btn btn-lg btn-red margintop10 pull-left" id="btRemove">Remove Atividade</button></div>
 			</div>
 		</form>
 	</div>

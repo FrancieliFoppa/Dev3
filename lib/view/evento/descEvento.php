@@ -2,6 +2,8 @@
 ?>
 
 <style type="text/css">
+	.odd { cursor: pointer; }
+	.even { cursor: pointer; }
 	.row{ margin-bottom:0px !important; }
 </style>
 <div class="container">
@@ -48,58 +50,63 @@
 						</div>
 						<div class="row">
 							<div class="col-lg-2">
-								<button class="btn btn-lg btn-theme margintop10 pull-left">Editar</button>
+								<button class="btn btn-lg btn-theme margintop10 pull-left" id="btnEditaEvento">Editar</button>
 							</div>
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="atividades">
-						<table id="table_listaEventos" class="display" >
+						<button type="button" class="btn btn-primary" id="btnAddAtividade">Add Atividade</button>
+						<table id="table_listaAtividades" class="display" >
 							<thead>
 								<tr>
 									<th>id</th>
-									<th>Nome</th>
 									<th>Descri&ccedil;&atilde;o</th>
-									<th>Data In&iacute;cio</th>
-									<th>Data Fim</th>
+									<th>Data</th>
+									<th>Hora</th>
+									<th>Dura&ccedil;&atilde;o</th>
+									<th>Valor</th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
 									<th>id</th>
-									<th>Nome</th>
 									<th>Descri&ccedil;&atilde;o</th>
-									<th>Data In&iacute;cio</th>
-									<th>Data Fim</th>
+									<th>Data</th>
+									<th>Hora</th>
+									<th>Dura&ccedil;&atilde;o</th>
+									<th>Valor</th>
 								</tr>
 							</tfoot>
 							<tbody>
 								<tr>
 									<td>0</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
+									<td>System uritoqous Architect</td>
 									<td>2009/01/12</td>
-									<td>2011/04/25</td>
+									<td>11:30</td>
+									<td>1h</td>
+									<td>155,00</td>
 								</tr>
 								<tr>
-									<td>1</td>
-									<td>Accountant</td>
-									<td>Tokyo</td>
-									<td>2011/07/25</td>
-									<td>2011/07/25</td>
+									<td>0</td>
+									<td>System uritoqous Architect</td>
+									<td>2009/01/12</td>
+									<td>11:30</td>
+									<td>1h</td>
+									<td>155,00</td>
 								</tr>
 								<tr>
-									<td>2</td>
-									<td>Junior Technical Author</td>
-									<td>San Francisco</td>
+									<td>0</td>
+									<td>System uritoqous Architect</td>
 									<td>2009/01/12</td>
-									<td>2009/01/12</td>
+									<td>11:30</td>
+									<td>1h</td>
+									<td>155,00</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="participantes">2</div>
 				</div>
-			
 			</div>			
 		</div>
 	</div>
@@ -108,24 +115,66 @@
 <script>
 	$(document).ready(function(){
 
-		$('#myTab a').click(function (e) {
-			e.preventDefault()
-			$(this).tab('show')
-		});
-		
-		var table = $('#table_listaEventos').DataTable({
+		var table = $('#table_listaAtividades').DataTable({
 			"bPaginate": true,
 			"bLengthChange": false,
 			"bFilter": true,
 			"bInfo": false,
 			"bAutoWidth": false,
-			"iDisplayLength": 50 
+			"iDisplayLength": 50
 		});
-		/*
-		$('#table_listaEventos tbody').on('click', 'tr', function () {
+
+		$('#btnEditaEvento').click(function () {
+			var content = null;
+			
+			$.ajax({
+				type: "POST",
+				url: '?show=evento&action=cadastroEvento&onlyShow=1',
+				contentType: "application/json; charset=utf-8",
+				dataType: "html",
+				data: '{resourceFileName:"mapedit",culture:"' + $("#lang-name").val() + '"}',
+				cache: true,
+				async: false, // to set local variable
+				success: function(data) {
+					content = data;
+				}
+			});
+			
+			$.fancybox.open({
+				live: true,
+				type: 'html',
+				content: content,
+				afterClose : function() { 
+					//setupPage();
+				}
+			});
+		});
+
+		$('#table_listaAtividades tbody').on('click', 'tr', function () {
 			var id = table.row(this).data()[0];
-			window.location.href = "?show=evento&action=descEvento&cod="+id;
+			var content = null;
+			
+			$.ajax({
+				type: "POST",
+				url: '?show=atividade&action=cadastroAtividade&onlyShow=1',
+				contentType: "application/json; charset=utf-8",
+				dataType: "html",
+				data: '{resourceFileName:"mapedit",culture:"' + $("#lang-name").val() + '"}',
+				cache: true,
+				async: false, // to set local variable
+				success: function(data) {
+					content = data;
+				}
+			});
+			
+			$.fancybox.open({
+				live: true,
+				type: 'html',
+				content: content,
+				afterClose : function() { 
+					//setupPage();
+				}
+			});
 		});
-		*/
 	});
 </script>

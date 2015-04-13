@@ -1,7 +1,7 @@
 <?php
 require_once ('lib/view/SiteView.php');
 
-class EventoView extends SiteView{
+class AtividadeView extends SiteView{
 
 	public function getTemplate() {
 		ob_start();
@@ -9,14 +9,8 @@ class EventoView extends SiteView{
 			require_once("lib/view/deny/default.php");			
 		}else{
 			switch($this->action) {
-				case 'cadastroEvento':
-					require_once("lib/view/evento/cadastroEvento.php");
-					break;
-				case 'descEvento':
-					require_once("lib/view/evento/descEvento.php");
-					break;
-				case 'listaEventos':
-					require_once("lib/view/evento/listaEventos.php");
+				case 'cadastroAtividade':
+					require_once("lib/view/atividade/cadastroAtividade.php");
 					break;
 				default:
 					require_once("lib/view/deny/pageNotFound.php");

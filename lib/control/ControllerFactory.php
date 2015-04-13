@@ -1,6 +1,7 @@
 <?php
 
 // Require_once dos controllers
+require_once ('lib/control/AtividadeController.php');
 require_once ('lib/control/ParticipanteController.php');
 require_once ('lib/control/UsuarioController.php');
 require_once ('lib/control/QueryController.php');
@@ -13,6 +14,7 @@ class ControllerFactory {
 
 	// Lista de controllers
 	public static $controllers = array(
+			"atividade"		=> "AtividadeController",
 			"participante"	=> "ParticipanteController",
 			"usuario"		=> "UsuarioController",
 			"login"			=> "LoginController",

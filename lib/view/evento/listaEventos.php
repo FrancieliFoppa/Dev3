@@ -70,7 +70,7 @@
 			
 			$.ajax({
 				type: "POST",
-				url: '?show=evento&action=listaEventos',
+				url: '?show=evento&action=cadastroEvento&onlyShow=1',
 				contentType: "application/json; charset=utf-8",
 				dataType: "html",
 				data: '{resourceFileName:"mapedit",culture:"' + $("#lang-name").val() + '"}',
@@ -83,14 +83,14 @@
 			
 			$.fancybox.open({
 				live: true,
-				type: 'iframe',
+				type: 'html',
 				content: content,
 				afterClose : function() { 
 					//setupPage();
 				}
 			});
 		});
-		
+
 		var table = $('#table_listaEventos').DataTable({
 		    "bPaginate": true,
 		    "bLengthChange": false,

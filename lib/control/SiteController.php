@@ -12,7 +12,7 @@ class SiteController {
 	
 	public function getView() {
 		if($this->view == null){
-			$this->view = DenyView("pageNotFound");
+			$this->view = new DenyView("pageNotFound");
 		}
 		return $this->view;
 	}
