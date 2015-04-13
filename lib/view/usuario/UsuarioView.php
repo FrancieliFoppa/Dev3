@@ -9,6 +9,9 @@ class UsuarioView extends SiteView{
 			require_once("lib/view/deny/default.php");			
 		}else{
 			switch($this->action) {
+				case 'listaUsuarios':
+					require_once("lib/view/usuario/listaUsuarios.php");
+					break;
 				case 'home':
 					require_once("lib/view/usuario/home.php");
 					break;

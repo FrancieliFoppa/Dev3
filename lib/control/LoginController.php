@@ -26,7 +26,7 @@ class LoginController extends SiteController {
 					break;
 				case "logout":
 					$res = $this->logout();
-					header("LOCATION: ");
+					$this->view = new LoginView("login", $res['errorMsg'], $res['nextAction']);
 					break;
 				default:
 					$this->view = new LoginView(null);
