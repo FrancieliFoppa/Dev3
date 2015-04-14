@@ -29,7 +29,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.html">DS<span>3</span></a>
+							<a class="navbar-brand" href="?show=static&action=home">new<span>PMI</span></a>
 						</div>
 						
 						<div class="navbar-collapse collapse ">
