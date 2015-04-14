@@ -24,7 +24,12 @@
 				<div class="navbar navbar-default navbar-static-top">
 					<div class="container">
 						<div class="navbar-header">
-							<a class="navbar-brand" href="?show=static&action=home">DS<span>3</span></a>
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="?show=static&action=home">new<span>PMI</span></a>
 						</div>
 					</div>
 				</div>
