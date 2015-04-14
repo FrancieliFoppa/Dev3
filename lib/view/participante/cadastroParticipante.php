@@ -8,42 +8,30 @@
 		<div class="col-md-12">
 			<form action="#" class="horizontal-form">
 				<div class="form-body">
-					<h3 class="form-section">Cadastro de Evento</h3>
+					<h3 class="form-section">Cadastro de Participante</h3>
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="control-label">Nome</label>
-								<input type="text" id="nome" class="form-control">
+								<input type="text" id="nome" name="nome" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label">CPF</label>
+								<input type="text" id="cpf" name="cpf" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label class="control-label">Telefone</label>
+								<input type="text" id="fone" name="fone" class="form-control">
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="form-group">
-								<label class="control-label">Centro de Evento</label>
-								<select class="form-control" id="isAdmin" name="centroEvento">
-									<option value="0">Centro 1</option>
-									<option value="1">Centro 2</option>
-									<option value="2">Centro 3</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<label class="control-label">In&iacute;cio</label>
-								<input type="text" id="nome" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<label class="control-label">T&eacute;rmino</label>
-								<input type="text" id="nome" class="form-control">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group">
-								<label class="control-label">Descri&ccedil;&atilde;o</label>
-								<textarea rows="4" class="form-control" id="desc"></textarea>
+								<label class="control-label">Email</label>
+								<input type="text" id="email" name="email" class="form-control">
 							</div>
 						</div>
 					</div>

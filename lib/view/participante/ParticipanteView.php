@@ -9,6 +9,9 @@ class ParticipanteView extends SiteView{
 			require_once("lib/view/deny/default.php");			
 		}else{
 			switch($this->action) {
+				case 'cadastroParticipante':
+					require_once("lib/view/participante/cadastroParticipante.php");
+					break;
 				case 'listaParticipantes':
 					require_once("lib/view/participante/listaParticipantes.php");
 					break;

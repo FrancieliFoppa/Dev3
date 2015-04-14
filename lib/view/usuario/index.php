@@ -54,8 +54,8 @@
 								<li class="dropdown ">
 									<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false">Eventos <b class=" icon-angle-down"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="?show=evento&action=listaEventos">Listar Eventos</a></li>
-										<li><a href="?show=usuario&action=home">op2</a></li>
+										<li><a href="?show=evento&action=listaEventos">Lista de Eventos</a></li>
+										<li><a href="?show=evento&action=listaCentrosEvento">Centros de Evento</a></li>
 									</ul>
 								</li>
 								<!-- TODO: Testar se isAdministrator == 1 -->
