@@ -126,7 +126,6 @@
 
 		$('#btnEditaEvento').click(function () {
 			var content = null;
-			
 			$.ajax({
 				type: "POST",
 				url: '?show=evento&action=cadastroEvento&onlyShow=1',
@@ -150,10 +149,34 @@
 			});
 		});
 
+		$('#btnAddAtividade').click(function () {
+			var content = null;
+			$.ajax({
+				type: "POST",
+				url: '?show=atividade&action=cadastroAtividade&onlyShow=1',
+				contentType: "application/json; charset=utf-8",
+				dataType: "html",
+				data: '{resourceFileName:"mapedit",culture:"' + $("#lang-name").val() + '"}',
+				cache: true,
+				async: false, // to set local variable
+				success: function(data) {
+					content = data;
+				}
+			});
+			
+			$.fancybox.open({
+				live: true,
+				type: 'html',
+				content: content,
+				afterClose : function() { 
+					//setupPage();
+				}
+			});
+		});
+
 		$('#table_listaAtividades tbody').on('click', 'tr', function () {
 			var id = table.row(this).data()[0];
 			var content = null;
-			
 			$.ajax({
 				type: "POST",
 				url: '?show=atividade&action=cadastroAtividade&onlyShow=1',
