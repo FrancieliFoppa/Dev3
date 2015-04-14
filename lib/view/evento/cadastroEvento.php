@@ -5,42 +5,44 @@
 
 <div class="container">
 	<div class="row">
-		<form action="#" class="horizontal-form">
-			<div class="form-body">
-				<h3 class="form-section">Cadastro de Evento</h3>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label class="control-label">Nome</label>
-							<input type="text" id="nome" class="form-control">
+		<div class="col-md-12">
+			<form action="#" class="horizontal-form">
+				<div class="form-body">
+					<h3 class="form-section">Cadastro de Evento</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Nome</label>
+								<input type="text" id="nome" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label">In&iacute;cio</label>
+								<input type="text" id="nome" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="control-label">T&eacute;rmino</label>
+								<input type="text" id="nome" class="form-control">
+							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="form-group">
-							<label class="control-label">In&iacute;cio</label>
-							<input type="text" id="nome" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="form-group">
-							<label class="control-label">T&eacute;rmino</label>
-							<input type="text" id="nome" class="form-control">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label">Descri&ccedil;&atilde;o</label>
+								<textarea rows="4" class="form-control" id="desc"></textarea>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<label class="control-label">Descri&ccedil;&atilde;o</label>
-							<textarea rows="4" class="form-control" id="desc"></textarea>
-						</div>
-					</div>
+				<div class="form-actions right">
+					<button type="button" class="btn btn-lg btn-theme margintop10 pull-left" id="btSalva">Salva</button>
 				</div>
-			</div>
-			<div class="form-actions right">
-				<button type="button" class="btn btn-lg btn-theme margintop10 pull-left" id="btSalva">Salva</button>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </div>
 
