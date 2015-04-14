@@ -12,6 +12,9 @@ class UsuarioController extends SiteController {
 			$this->view = new DenyView("accessDenied");
 		}else{
 			switch($_REQUEST["action"]){
+				case "cadastroUsuario" :
+					$this->view = new UsuarioView("cadastroUsuario");
+					break;
 				case "listaUsuarios" :
 					$this->view = new UsuarioView("listaUsuarios");
 					break;
