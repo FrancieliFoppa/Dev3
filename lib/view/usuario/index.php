@@ -61,6 +61,7 @@
 								<!-- TODO: Testar se isAdministrator == 1 -->
 								<li><a href="?show=usuario&action=listaUsuarios">Usu&aacute;rios</a></li>
 								<!-- Fim teste -->
+								<li><a href="?show=participante&action=listaParticipantes">Participantes</a></li>
 								<li><a href="" onClick="logout()">Logout</a></li>
 							</ul>
 						</div>

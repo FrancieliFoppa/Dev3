@@ -7,7 +7,17 @@ class ParticipanteController extends SiteController {
 	public function __construct() {
 		parent::__construct();
 		if(isset($_REQUEST["action"])){
-			$this->view = new ParticipanteView($_REQUEST["action"]);
+			switch($_REQUEST["action"]){
+				case "cadastroParticipante" :
+					$this->view = new ParticipanteView("cadastroParticipante");
+					break;
+				case "listaParticipantes" :
+					$this->view = new ParticipanteView("listaParticipantes");
+					break;
+				default: 
+					$this->view = new DenyView("pageNotFound");
+					break;
+			}
 		}else{
 			$this->view = new DenyView("pageNotFound");
 		}
