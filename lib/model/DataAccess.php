@@ -22,7 +22,7 @@ class DataAccess {
 	
     public static function getInstance(){
     	if (!self::$bdConnectionStatic){
-			self::$bdConnectionStatic = new self("localhost", "root", "BdCalhux07", "bdDes");
+			self::$bdConnectionStatic = new self("sql3.freemysqlhosting.net", "sql374144", "hU1*bK6!", "sql374144");
 		}
 		
 		if( self::$bdConnectionStatic === FALSE ) {  
