@@ -5,11 +5,11 @@ require_once('lib/model/Dto.php');
 class ParticipantesDto extends Dto {
 	
 	protected $attributes = array (
- 		"idParticipante"	=> null,	
-		"nome"				=> null,
-		"email"				=> null,
-		"telefone"			=> null,
-		"cpf"				=> null
+ 		"IdParticipante"	=> null,	
+		"Nome"				=> null,
+		"Email"				=> null,
+		"Telefone"			=> null,
+		"CPF"				=> null
 	);
 
 	public function __construct($properties) {
