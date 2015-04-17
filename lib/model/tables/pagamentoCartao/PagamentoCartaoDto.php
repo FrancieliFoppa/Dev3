@@ -1,10 +1,11 @@
 <?php
 require_once('lib/model/Dto.php');
-class CertificadoDto extends Dto {
+class PagamentoCartaoDto extends Dto {
 	
 	protected $attributes = array (
- 		"IdCertificado"				=> null,	
-		"CamposDoCertificado"		=> null
+ 		"IdPagamentoCartao"			=> null,	
+		"Bandeira"					=> null,
+		"NumeroCartao"				=> null
 	);
 	public function __construct($properties) {
 		parent::__construct($this->attributes, $properties);
